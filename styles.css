@@ -1,0 +1,78 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    border: solid 1px black;
+    height: 100vh;
+}
+
+header {
+    grid-column: 2/3;
+    border: solid 1px red;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    padding: 10px 30px;
+}
+
+.upper-header, .lower-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-container, .user-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px brown;
+}
+
+#search-bar {
+    width: 500px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+}
+
+.profile-container,  .action-buttons-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: solid 1px brown;
+}
+
+.action-buttons-container > button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(55, 164, 207);
+    height: 1.75rem;
+    width: 4rem;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+aside {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    border: solid 1px blue;
+
+}
+
+main {
+    grid-column: 2/3;
+    border: solid 1px green;
+
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+    border: solid 1px pink;
+}
